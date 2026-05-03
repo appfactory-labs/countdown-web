@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap');
+
+:root {
+  --bg: #f7f4ef;
+  --surface: #fcfbf9;
+  --text: #172027;
+  --muted: #5f6972;
+  --accent: #1f3b4d;
+  --border: #ded9d2;
+  --shadow: 0 18px 48px rgba(21, 35, 45, 0.12);
+  --radius-lg: 24px;
+  --radius-md: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Instrument Sans', 'Avenir Next', 'Segoe UI', sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 0%, #fffaf2 0%, transparent 40%),
+    radial-gradient(circle at 85% 15%, #eff5f8 0%, transparent 35%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(247, 244, 239, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(222, 217, 210, 0.65);
+}
+
+.header-inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--muted);
+}
+
+.site-nav a {
+  font-size: 0.98rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--accent);
+}
+
+.hero {
+  padding: 70px 0 34px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-copy {
+  animation: fadeUp 0.7s ease both;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 0.8rem;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.15;
+}
+
+.hero h1 {
+  font-family: 'Newsreader', 'Iowan Old Style', serif;
+  font-size: clamp(2.2rem, 5vw, 3.95rem);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin-bottom: 1.1rem;
+}
+
+.lead {
+  color: var(--muted);
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.7vw, 1.1rem);
+}
+
+.cta-row {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.95rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #f8fafb;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.72rem 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  box-shadow: 0 6px 18px rgba(31, 59, 77, 0.28);
+}
+
+.coming-soon-note {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  animation: fadeUp 0.8s ease 0.12s both;
+}
+
+.iphone-frame {
+  position: relative;
+  width: min(330px, 78vw);
+  border-radius: 46px;
+  background: #171717;
+  padding: 10px;
+  border: 1px solid #303030;
+  box-shadow: var(--shadow);
+}
+
+.iphone-screen {
+  border-radius: 36px;
+  overflow: hidden;
+  background: #000;
+}
+
+.iphone-screen img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.features {
+  padding: 52px 0;
+}
+
+.section-title {
+  font-family: 'Newsreader', 'Iowan Old Style', serif;
+  font-size: clamp(1.75rem, 3.8vw, 2.6rem);
+  margin-bottom: 1.1rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.62) 100%);
+  padding: 20px;
+  box-shadow: 0 5px 18px rgba(11, 18, 24, 0.05);
+}
+
+.feature-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.48rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+}
+
+.mini-section {
+  padding: 26px 0 70px;
+}
+
+.mini-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.4rem, 3vw, 2.2rem);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.mini-panel h2 {
+  font-family: 'Newsreader', 'Iowan Old Style', serif;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  margin-bottom: 0.85rem;
+}
+
+.mini-panel p {
+  margin: 0;
+  color: var(--muted);
+  max-width: 68ch;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: rgba(249, 247, 243, 0.88);
+}
+
+.footer-inner {
+  min-height: 82px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  color: var(--muted);
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: var(--accent);
+}
+
+.copyright {
+  color: var(--muted);
+}
+
+.legal-page {
+  padding: 56px 0 78px;
+}
+
+.legal-shell {
+  max-width: 780px;
+}
+
+.legal-shell h1 {
+  font-family: 'Newsreader', 'Iowan Old Style', serif;
+  font-size: clamp(2rem, 4.1vw, 3rem);
+  margin-bottom: 0.3rem;
+}
+
+.last-updated {
+  color: var(--muted);
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.legal-section {
+  margin-bottom: 1.35rem;
+}
+
+.legal-section h2 {
+  font-size: 1.08rem;
+  margin-bottom: 0.35rem;
+}
+
+.legal-section p {
+  margin: 0;
+  color: #2f3942;
+}
+
+.support-email {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero {
+    padding-top: 48px;
+  }
+
+  .hero-visual {
+    order: -1;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-inner {
+    min-height: 66px;
+  }
+
+  .site-nav {
+    gap: 1rem;
+    font-size: 0.94rem;
+  }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 16px 0;
+  }
+
+  .iphone-frame {
+    width: min(315px, 86vw);
+  }
+}
