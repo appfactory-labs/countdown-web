@@ -60,7 +60,7 @@
           <a href="../terms/">Terms of Use</a>
           <a href="./" aria-current="page">Support</a>
         </nav>
-        <span class="copyright">© 2026 Countdown | Soulll Studio Inc.</span>
+        <span class="copyright">© 2026 App Factory Labs. All rights reserved.</span>
       </div>
     </footer>
 
@@ -68,8 +68,8 @@
       (function () {
         const form = document.getElementById('support-form');
         const success = document.getElementById('support-success');
-        const inbox = ['dadziemikke2', 'icloud.com'];
-        form.action = 'https://formsubmit.co/' + inbox[0] + '@' + inbox[1];
+        const inbox = ['YnVpbGRhcHBmYWN0b3J5', 'Z21haWwuY29t'];
+        form.action = 'https://formsubmit.co/' + atob(inbox[0]) + '@' + atob(inbox[1]);
 
         const params = new URLSearchParams(window.location.search);
         if (params.get('sent') === '1') {
