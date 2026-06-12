@@ -1,0 +1,18 @@
+# Commit message template (your style)
+#
+# Format:
+# add: <what was added>
+# fix: <what was fixed>
+# delete: <what was removed>
+#
+# Examples:
+# add: create support page with form
+# fix: update nav links for privacy terms support
+# delete: remove coming soon tagline from hero
+
+<type>: <short summary>
+
+# Optional details:
+# - what changed
+# - why it changed
+# - important notes
